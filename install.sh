@@ -13,7 +13,8 @@ rm -f /etc/udev/rules.d/*usb*.rules
 echo "Creating /usr/local/bin/usb_locker.sh..."
 cat << 'EOF' > /usr/local/bin/usb_locker.sh
 #!/bin/bash
-i-kilit
+/usr/bin/pkill -9 -f kilit
+sudo -u etap /usr/local/bin/i-kilit
 EOF
 
 echo "Creating /usr/local/bin/usb_killer.sh..."
